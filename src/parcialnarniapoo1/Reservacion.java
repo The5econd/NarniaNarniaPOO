@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package parcialnarniapoo1;
-
+import java.util.Scanner;
+import java.util.ArrayList;
 /**
  *
  * @author javie
  */
 public class Reservacion {
+    ArrayList<Paquete> paquetes = new ArrayList<>();
     public String infoHuesped;
     public int numeroHabitacion;
     public int diasReservacion;
@@ -66,5 +68,42 @@ public class Reservacion {
         this.costoNoche = costoNoche;
         this.costoTotal = costoTotal;
     }
-
+    
+    public void CambiarPrecioPaquete(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("¿Que paquete desea cambiar? ");
+        String n = sc.nextLine();
+        paquetes.forEach((Paquete paque) -> {
+            if(paque.nombrePaquete.equals(n)){
+                System.out.println("Nuevo precio del paquete: ");
+                double precioNuevo = sc.nextDouble();
+                paque.precioPaquete = precioNuevo;
+            }
+        });
+    }
+    
+    public void mostrarPaquete(){
+        paquetes.forEach((Paquete paque) -> {
+            System.out.println(paque.nombrePaquete+" "+paque.contenidoPaquete+" "+paque.precioPaquete);
+        });
+    }
+    
+    public void CrearPaquete(){  
+        Scanner sc = new Scanner(System.in);
+        String nombrePaquete,contenidoPaquete;
+        double precioPaquete;
+        
+        System.out.println("Introduzca el nombre del paquete: ");
+        nombrePaquete = sc.nextLine();
+        
+        System.out.println("Introduzca el contenido del paquete: ");
+        contenidoPaquete = sc.nextLine();
+        
+        System.out.println("Introduzca el precio del paquete: ");
+        precioPaquete = sc.nextDouble();
+        
+        Paquete nuevoPaquete = new Paquete(nombrePaquete,contenidoPaquete,precioPaquete);
+        
+        paquetes.add(nuevoPaquete);
+    }
 }
