@@ -61,5 +61,6 @@ public class Habitacion {
     public void setIDhabitacion(String idHab){
         this.idHabitacion=idHab;
     }
+    
 }
 
