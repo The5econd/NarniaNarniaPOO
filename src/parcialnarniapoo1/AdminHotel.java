@@ -3,7 +3,7 @@ package parcialnarniapoo1;
 import java.util.ArrayList;
 /**
  *
- * @author Fer Anstirman
+ * @author FerAnstirman
  */
 public class AdminHotel {
     
@@ -99,5 +99,7 @@ public class AdminHotel {
         System.out.println("Se han creado todas las habitaciones con exito!");
     }
     
-    
+    void ModificarHabitacion(){
+        
+    }
 }
