@@ -106,4 +106,18 @@ public class Reservacion {
         
         paquetes.add(nuevoPaquete);
     }
+    
+    public double SeleccionarPaquete(){
+        Scanner sc = new Scanner(System.in);
+        String Pack;
+        System.out.println("¿Que paquete desea?");
+        Pack = sc.nextLine();
+        double precio = -1;
+        for (Paquete paques : paquetes){
+            if(paques.nombrePaquete.equals(Pack)){
+                precio = paques.precioPaquete; 
+            }
+        }
+        return precio;
+    }
 }
