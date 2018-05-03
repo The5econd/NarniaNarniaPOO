@@ -123,5 +123,60 @@ public class AdminHotel {
         }
     }
     
+    void HabilitarHabitacion(){
+        String idHabitacion;
+        int opcion=0;
+        boolean habilitado;
+        System.out.println("1.Habilitar Habitacion 2.Deshabilitar Habitacion");
+        opcion=input.nextInt();
+        switch(opcion){
+            case 1:
+                System.out.println("Ingrese el codigo de la habitacion a habiliar:");
+                idHabitacion=input.next();
+                for(Habitacion h:habitaciones){
+                    if(idHabitacion.equals(h.getIDhabitacion())){
+                        h.setEstado(true);
+                    }else{
+                        System.out.println("Este cuarto no existe");
+                    }
+                }
+                break;
+            case 2:
+                System.out.println("Ingrese el codigo de la habitacion a habiliar:");
+                idHabitacion=input.next();
+                for(Habitacion h:habitaciones){ 
+                    if(idHabitacion.equals(h.getIDhabitacion())){
+                        h.setEstado(false);
+                    }else{
+                        System.out.println("Este cuarto no existe");
+                    }
+                }
+                break;
+            default:
+                System.out.println("Ha ingresado una opcion no valida");
+        }
+    }
     
+    void HabilitarPiso(){
+        String piso;
+        System.out.println("Ingrese el piso a modificar:");
+        piso=input.next();
+        int opcion=0;
+        System.out.println("1.Habilitar Piso 2.Deshabilitar Piso");
+        opcion=input.nextInt();
+        for(Habitacion h:habitaciones){
+            if(piso.equals(h.getPiso())){
+                switch(opcion){
+                    case 1:
+                        h.setEstado(true);
+                        break;
+                    case 2:
+                        h.setEstado(false);
+                        break;
+                    default:
+                        System.out.println("Ingreso una opcion no valida");
+                }
+            }
+        }
+    }
 }
