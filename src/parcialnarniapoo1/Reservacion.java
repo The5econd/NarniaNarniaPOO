@@ -15,7 +15,6 @@ public class Reservacion {
     public int diasReservacion;
     public double costoNoche;
     public double costoTotal;
-    public int paquete;
 
     public String getInfoHuesped() {
         return infoHuesped;
@@ -57,24 +56,15 @@ public class Reservacion {
         this.costoTotal = costoTotal;
     }
 
-    public int getPaquete() {
-        return paquete;
-    }
-
-    public void setPaquete(int paquete) {
-        this.paquete = paquete;
-    }
-    
     public Reservacion() {
     }
 
-    public Reservacion(String infoHuesped, int numeroHabitacion, int diasReservacion, double costoNoche, double costoTotal, int paquete) {
+    public Reservacion(String infoHuesped, int numeroHabitacion, int diasReservacion, double costoNoche, double costoTotal) {
         this.infoHuesped = infoHuesped;
         this.numeroHabitacion = numeroHabitacion;
         this.diasReservacion = diasReservacion;
         this.costoNoche = costoNoche;
         this.costoTotal = costoTotal;
-        this.paquete = paquete;
     }
 
 }
