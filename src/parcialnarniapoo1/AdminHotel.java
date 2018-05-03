@@ -179,4 +179,13 @@ public class AdminHotel {
             }
         }
     }
+    
+    
+    void Ansti(){
+        String m="manco", ansti="manco";
+        
+        while(ansti==m){
+            System.out.println("Manco");
+        }
+    }
 }

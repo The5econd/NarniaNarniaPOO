@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Ricardo Villeda
  */
 public class Cliente {
-    
+    Reservacion reservacion = new Reservacion();
     ArrayList<Habitacion>habitaciones= new ArrayList<>();
     Scanner leer =  new Scanner(System.in);
     
@@ -92,21 +92,7 @@ public class Cliente {
     String Dui, infoCliente, nombre, apellido, tarjetaCredito, telefono;
     int TotalHabitaciones;
     
-    public int Buscar(String name) {
-        int cont = 0;
-        int indice = 0;
-        
-        for (Habitacion e : habitaciones) {
-            String lista;
-            lista = e.toString();
-            if (lista.equals(name)) {
-                indice = cont;
-            }
-            cont++;
-        }
-        return indice;
-        
-    }
+    
     
     public void InfoCliente(){
         System.out.println("Nombre: ");
@@ -123,4 +109,20 @@ public class Cliente {
         this.infoCliente= this.nombre + this.apellido + this.Dui + this.telefono + this.tarjetaCredito;
     }
     
+    /*
+    public void HacerReservacion(){
+        int n;
+        String m;
+        System.out.println("Seleccione 1 para ver los paquetes disponibles o 2 si prefiere otro servicio: ");
+        n=leer.nextInt();
+        if(n==1){
+            reservacion.mostrarPaquete();
+            reservacion.SeleccionarPaquete();
+        }
+        else{
+        
+        
+        }
+    no terminada aun
+    }*/
 }
