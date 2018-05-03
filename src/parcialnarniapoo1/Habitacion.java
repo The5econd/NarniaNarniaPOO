@@ -13,7 +13,9 @@ public class Habitacion {
     private String piso;
     private int numero;
     private double precioHabitacion;
-
+    private String idHabitacion;
+    boolean estado;
+    
     public boolean isEstado() {
         return estado;
     }
@@ -21,7 +23,6 @@ public class Habitacion {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    boolean estado;
     
     public Habitacion(){}
     
@@ -41,6 +42,9 @@ public class Habitacion {
     public double getPrecioHab(){
         return precioHabitacion;
     }
+    public String getIDhabitacion(){
+        return idHabitacion + numero;
+    }
     //SETTERS
     public void setPiso(String Piso){
         this.piso=Piso;
@@ -50,6 +54,9 @@ public class Habitacion {
     }
     public void setPrecioHab(double PrecioHab){
         this.precioHabitacion=PrecioHab;
+    }
+    public void setIDhabitacion(String idHab){
+        this.idHabitacion=idHab;
     }
 }
 
