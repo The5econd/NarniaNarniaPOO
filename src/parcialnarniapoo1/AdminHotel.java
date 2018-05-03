@@ -1,6 +1,7 @@
 
 package parcialnarniapoo1;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author FerAnstirman
@@ -12,6 +13,7 @@ public class AdminHotel {
     private int numeroPisos=6;
     private int numeroHabitaciones=10;
     private double precioHabitacion=500;
+    Scanner input= new Scanner(System.in);
     
     public AdminHotel(){
         clientes= new ArrayList<Cliente>();
@@ -100,6 +102,24 @@ public class AdminHotel {
     }
     
     void ModificarHabitacion(){
-        
+        String habitacion="";
+        int opcion=0;
+        System.out.println("Que cuarto desea modificar: ");
+        habitacion= input.next();
+        for(Habitacion h:habitaciones){
+            if(h.getIDhabitacion().equals(habitacion)){
+                System.out.println("1.Modificar Precio" );
+                switch(opcion){
+                    case 1:
+                        double nuevoPrecio;
+                        System.out.println("Ingrese el nuevo precio de la habitacion:");
+                        nuevoPrecio=input.nextInt();
+                        h.setPrecioHab(nuevoPrecio);
+                        break;
+                }
+            }else{
+                System.out.println("La habitacion buscada no existe");
+            }
+        }
     }
 }
