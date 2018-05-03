@@ -108,15 +108,19 @@ public class Cliente {
         
     }
     
-    public void HacerReservacion(){
+    public void InfoCliente(){
         System.out.println("Nombre: ");
         this.nombre=leer.nextLine();
         System.out.println("Apellido: ");
         this.apellido= leer.nextLine();
         System.out.println("Telefono: ");
         this.telefono=leer.nextLine();
+        System.out.println("Tarjeta de credito o debito: ");
+        this.tarjetaCredito=leer.nextLine();
+        System.out.println("DUI: ");
+        this.Dui= leer.nextLine();
         
-        
+        this.infoCliente= this.nombre + this.apellido + this.Dui + this.telefono + this.tarjetaCredito;
     }
     
 }
