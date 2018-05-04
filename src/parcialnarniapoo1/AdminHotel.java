@@ -88,9 +88,11 @@ public class AdminHotel {
                         break;
                     case 5:
                         nuevaHabitacion.setPiso("E");
+                        nuevaHabitacion.setPrecioHab(550);
                         break;
                     case 6:
                         nuevaHabitacion.setPiso("F");
+                        nuevaHabitacion.setPrecioHab(550);
                         break;
                     default:
                         System.out.println("Ha habido un error creando las habitaciones");
