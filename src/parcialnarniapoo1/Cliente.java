@@ -17,6 +17,7 @@ public class Cliente {
     Reservacion reservacion = new Reservacion();
     ArrayList<Habitacion>habitaciones= new ArrayList<>();
     Scanner leer =  new Scanner(System.in);
+    AdminHotel admin = new AdminHotel();
     
     public Cliente() {
     }
@@ -109,10 +110,12 @@ public class Cliente {
         this.infoCliente= this.nombre + this.apellido + this.Dui + this.telefono + this.tarjetaCredito;
     }
     
-    /*
+    
     public void HacerReservacion(){
         int n;
+        double l,costoTotal;
         String m;
+        
         System.out.println("Seleccione 1 para ver los paquetes disponibles o 2 si prefiere otro servicio: ");
         n=leer.nextInt();
         if(n==1){
@@ -120,9 +123,19 @@ public class Cliente {
             reservacion.SeleccionarPaquete();
         }
         else{
-        
-        
+            admin.CrearHabitaciones();
+            System.out.println("En que piso le gustaria la habitacion(A,B,C,D,E,F): ");
+            m=leer.nextLine();
+            System.out.println("Que numero de habitacion deseraia(recuerde las pares son dobles y las impares sencillas): ");
+            n=leer.nextInt();
+            System.out.println("Por cuantos dias desea resrvar la habitacion: ");
+            l=leer.nextDouble();
+            
+            costoTotal= (admin.CalcularPrecioHabitaciones(n, m)*l);
+            System.out.println("Su costo total sera de: " + "$"+costoTotal );
+            
         }
-    no terminada aun
-    }*/
-}
+   
+    }
+    
+}   

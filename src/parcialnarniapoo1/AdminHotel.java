@@ -183,11 +183,12 @@ public class AdminHotel {
     }
     
     
-    void Ansti(){
-        String m="manco", ansti="manco";
-        
-        while(ansti==m){
-            System.out.println("Manco");
+    double CalcularPrecioHabitaciones(int n, String m){
+        for(Habitacion e : habitaciones){
+          if(e.getNumHab()==n && e.getPiso().equals(m)){
+              return e.getPrecioHab();
+          }  
         }
+        return 0;
     }
 }
