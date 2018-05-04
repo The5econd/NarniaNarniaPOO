@@ -146,7 +146,7 @@ public class Cliente {
             costoTotal= (admin.CalcularPrecioHabitaciones(n, m)*l);
             System.out.println("Su costo total sera de: " + "$"+costoTotal );
             admin.HabilitarHabitacion();
-            
+            //hola
         }
    
     }
